@@ -6,11 +6,11 @@
         >
             <!-- CONTENT SECTION -->
             <div
-                class="flex items-start"
+                class="flex items-start justify-between"
             >
                 <!-- PROFILE SECTION -->
                 <div
-                    class="w-66875"
+                    class="w-7/12"
                 >
                     <!-- FIRST SECTION -->
                     <div
@@ -275,6 +275,100 @@
                 <!-- END -->
 
                 <!-- SLOT SECTION -->
+                <div
+                    class="w-4/12 border border-solid border-just-tailwind-gray bg-just-tailwind-white rounded-md py-6 px-104375 shadow-slot"
+                >
+                    <!-- AMOUNT SECTION -->
+                    <div>
+                        <p
+                            class="leading-normal tracking-normal text-left font-normal text-16 text-just-tailwind-gray-700"
+                        >
+                            <span class="font-bold text-just-tailwind-black">${{ amount }}</span> / Session
+                        </p>
+                    </div>
+                    <!-- END -->
+
+                    <!-- TIME SECTION -->
+                    <div
+                        class="text-left"
+                    >
+                        <div
+                            class="mt-0625 px-043 w-1875 py-043 text-center border-2 border-solid border-just-tailwind-black rounded-lg"
+                            style="background-color:rgba(179, 189, 201, 0.21);"
+                        >
+                            <p
+                                class="leading-normal tracking-normal text-13 font-bold text-just-tailwind-black"
+                            >
+                                {{ time }} min
+                            </p>
+                        </div>
+                    </div>
+                    <!-- END -->
+
+                    <!-- SLOT SECTION -->
+                    <div
+                        v-for="(slot, i) in slots"
+                        :key="i"
+                        class="pb-6 border-b-2 border-solid border-just-tailwind-gray-300 mt-6"
+                    >
+                        <!-- DATE SECTION -->
+                        <div
+                            class="text-left"
+                        >
+                            <h3
+                                class="text-16 leading-normal tracking-normal font-bold text-just-tailwind-black text-left"
+                            >
+                                {{ slot.date }}
+                            </h3>
+                        </div>
+                        <!-- END -->
+
+                        <!-- TIME SECTION -->
+                        <div
+                            class="text-left mt-025"
+                        >
+                            <p
+                                class="text-13 leading-normal tracking-normal font-normal text-just-tailwind-black text-left"
+                            >
+                                {{ slot.time }}
+                            </p>
+                        </div>
+                        <!-- END -->
+
+                        <!-- DURATION SECTION -->
+                        <div
+                            class="flex items-center justify-between"
+                        >
+                            <p
+                                class="text-13 leading-normal tracking-normal font-normal text-just-tailwind-black text-left"
+                            >
+                                {{ slot.duration }}
+                            </p>
+                            <button
+                                class="text-just-tailwind-white bg-just-tailwind-primary rounded-md text-13 leading-normal tracking-normal text-center px-2 py-03125"
+                            >
+                                Choose
+                            </button>
+                        </div>
+                        <!-- END -->
+                    </div>
+                    <!-- END -->
+                    <!-- SEE MORE SLOTS SECTION -->
+                    <div
+                        class="text-left"
+                    >
+                        <div
+                            class="mt-0625 w-full py-0325 text-center border-2 border-solid border-just-tailwind-black rounded-lg"
+                        >
+                            <p
+                                class="leading-normal tracking-normal text-13 font-bold text-just-tailwind-black"
+                            >
+                                See more Slots
+                            </p>
+                        </div>
+                    </div>
+                    <!-- END -->
+                </div>
                 <!-- END -->
             </div>
             <!-- END -->
@@ -290,7 +384,25 @@ export default {
             name: 'Allison May',
             profession: 'Clinical Psychologist',
             amount: 80,
+            time: 60,
             quote: "I support women, moms, trauma <br> survivors, and those experiencing <br> invisible illnesses to change patterns and live their best lives",
+            slots: [
+                {
+                    date: 'Today, Aug 1',
+                    time: '10:00 AM',
+                    duration: '30 mins'
+                },
+                {
+                    date: 'Aug 2',
+                    time: '10:00 AM',
+                    duration: '30 mins'
+                },
+                {
+                    date: 'Aug 3',
+                    time: '10:00 AM',
+                    duration: '30 mins'
+                },
+            ],
             tags: [
                 {
                     name: "Stress"
