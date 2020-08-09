@@ -2,7 +2,7 @@
     <div>
         <!-- MAIN SECTION -->
         <div
-            class="px-11 py-66875 w-full bg-just-tailwind-white shadow-top-navbar"
+            class="px-11 fixed top-0 py-66875 w-full bg-just-tailwind-white shadow-top-navbar"
         >
             <center>
                 <div
