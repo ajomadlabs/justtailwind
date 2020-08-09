@@ -276,7 +276,7 @@
 
                 <!-- SLOT SECTION -->
                 <div
-                    class="w-4/12 border border-solid border-just-tailwind-gray bg-just-tailwind-white rounded-12 py-6 px-104375 shadow-slot"
+                    class="w-843125 border border-solid border-just-tailwind-gray bg-just-tailwind-white rounded-12 py-6 px-104375 shadow-slot"
                 >
                     <!-- AMOUNT SECTION -->
                     <div>
@@ -374,7 +374,7 @@
             <!-- END -->
             <!-- MORE THERAPIST SECTION -->
             <div
-                class="mt-32"
+                class="relative z-50 mt-32"
             >
                 <!-- HEADER SECTION -->
                 <div>
