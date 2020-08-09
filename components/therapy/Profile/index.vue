@@ -372,6 +372,95 @@
                 <!-- END -->
             </div>
             <!-- END -->
+            <!-- MORE THERAPIST SECTION -->
+            <div
+                class="mt-32"
+            >
+                <!-- HEADER SECTION -->
+                <div>
+                    <h3
+                        class="text-31 text-left leading-normal tracking-normal font-bold text-just-tailwind-black-900"
+                    >
+                        More Therapists
+                    </h3>
+                </div>
+                <!-- END -->
+
+                <!-- THERAPIST CARD CONTAINER -->
+                <div
+                    class="my-16 flex items-baseline overflow-x-scroll"
+                >
+                    <!-- CARD SECTION -->
+                    <div
+                        v-for="(data, i) in moreTherapists"
+                        :key="i"
+                        :class="i == 0 ? 'ml-0' : 'ml-4'"
+                    >
+                        <!-- IMAGE SECTION -->
+                        <div
+                            class="w-375 h-auto rounded-08"
+                        >
+                            <img
+                                :src="getImages(data.img)"
+                                class="w-full h-full object-contain"
+                                alt="Therapists"
+                            />
+                        </div>
+                        <!-- END -->
+
+                        <!-- CONTENT SECTION -->
+                        <div
+                            class="mt-8"
+                        >
+                            <!-- NAME SECTION -->
+                            <div>
+                                <h1
+                                    class="leading-normal tracking-normal text-left font-bold text-25 text-just-tailwind-black-900"
+                                >
+                                    {{ data.name }}
+                                </h1>
+                            </div>
+                            <!-- END -->
+
+                            <!-- PROFESSION SECTION -->
+                            <div
+                                class="mt-2"
+                            >
+                                <p
+                                    class="leading-normal tracking-normal text-left font-normal text-16 text-just-tailwind-gray-700"
+                                >
+                                    {{ data.profession }}
+                                </p>
+                            </div>
+                            <!-- END -->
+
+                            <!-- TAG SECTION -->
+                            <div
+                                class="mt-4 flex flex-wrap"
+                            >
+                                <div
+                                    v-for="i in data.tags"
+                                    :key="i"
+                                    :class="i == 'Stress' ? 'ml-0' : 'ml-4'"
+                                >
+                                    <p
+                                        class="leading-normal tracking-normal text-center text-16 font-medium text-just-tailwind-gray-700"
+                                    >
+                                        {{ i }}
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- END -->
+                        </div>
+                        <!-- END -->
+
+                    </div>
+                    <!-- END -->
+                </div>
+                <!-- END -->
+
+            </div>
+            <!-- END -->
         </div>
         <!-- END -->
     </center>
@@ -386,6 +475,48 @@ export default {
             amount: 80,
             time: 60,
             quote: "I support women, moms, trauma <br> survivors, and those experiencing <br> invisible illnesses to change patterns and live their best lives",
+            moreTherapists: [
+                {
+                    img: 'alisha3x.png',
+                    name: 'Mishay Butler',
+                    profession: 'Clinical Psychologist',
+                    tags: [
+                        'Stress',
+                        'Anxiety',
+                        'Depression'
+                    ]
+                },
+                {
+                    img: 'man3x.png',
+                    name: 'Andrew Jonas',
+                    profession: 'Clinical Psychologist',
+                    tags: [
+                        'Stress',
+                        'Anxiety',
+                        'Depression'
+                    ]
+                },
+                {
+                    img: 'alisha3x.png',
+                    name: 'Santa Jonas',
+                    profession: 'Clinical Psychologist',
+                    tags: [
+                        'Stress',
+                        'Anxiety',
+                        'Depression'
+                    ]
+                },
+                {
+                    img: 'man3x.png',
+                    name: 'Joshu John',
+                    profession: 'Clinical Psychologist',
+                    tags: [
+                        'Stress',
+                        'Anxiety',
+                        'Depression'
+                    ]
+                }
+            ],
             slots: [
                 {
                     date: 'Today, Aug 1',
