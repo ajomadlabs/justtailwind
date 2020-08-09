@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <clipPath id="clip-path">
+            <circle id="Ellipse_1430" cx="16" cy="16" r="16" fill="#007bfe" stroke="#707070" data-name="Ellipse 1430" transform="translate(24 81)"/>
+        </clipPath>
+    </defs>
+    <g id="Mask_Group_450" clip-path="url(#clip-path)" data-name="Mask Group 450" transform="translate(-24 -81)">
+        <g id="verified_user-24px" transform="translate(24 81)">
+            <path id="Path_4406" fill="none" d="M0 0h32v32H0z" data-name="Path 4406"/>
+            <path id="Path_4407" fill="#007bfe" d="M16 1.333L4 6.667v8c0 7.4 5.12 14.32 12 16 6.88-1.68 12-8.6 12-16v-8zm9.333 13.333c0 6.027-3.973 11.587-9.333 13.24-5.36-1.653-9.333-7.213-9.333-13.24V8.4L16 4.253 25.333 8.4zm-15.453.787L8 17.333l5.333 5.333L24 12l-1.88-1.893-8.787 8.787z" data-name="Path 4407"/>
+        </g>
+    </g>
+</svg>
