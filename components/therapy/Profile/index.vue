@@ -276,7 +276,7 @@
 
                 <!-- SLOT SECTION -->
                 <div
-                    class="w-4/12 border border-solid border-just-tailwind-gray bg-just-tailwind-white rounded-md py-6 px-104375 shadow-slot"
+                    class="w-4/12 border border-solid border-just-tailwind-gray bg-just-tailwind-white rounded-12 py-6 px-104375 shadow-slot"
                 >
                     <!-- AMOUNT SECTION -->
                     <div>
