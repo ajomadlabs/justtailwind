@@ -6,19 +6,19 @@
         >
             <!-- CONTENT SECTION -->
             <div
-                class="flex items-start justify-between"
+                class="lg:flex lg:items-start lg:justify-between"
             >
                 <!-- PROFILE SECTION -->
                 <div
-                    class="w-7/12"
+                    class="xs:w-full lg:w-7/12"
                 >
                     <!-- FIRST SECTION -->
                     <div
-                        class="flex items-start pb-22625 border-b-2 border-solid border-just-tailwind-gray-300"
+                        class="lg:flex lg:items-start lg:pb-22625 lg:border-b-2 lg:border-solid lg:border-just-tailwind-gray-300"
                     >
                         <!-- PROFILE IMAGE -->
                         <div
-                            class="w-5150 h-5150"                        
+                            class="xs:w-3675 xs:h-3675 lg:w-5150 lg:h-5150"                        
                         >
                             <img
                                 src="@/assets/images/profile3x.png"
@@ -30,12 +30,12 @@
 
                         <!-- CONTENT SECTION -->
                         <div
-                            class="ml-21375"
+                            class="lg:ml-21375"
                         >
                             <!-- NAME SECTION -->
                             <div>
                                 <h1
-                                    class="leading-normal tracking-normal text-left font-bold text-39 text-just-tailwind-black-900"
+                                    class="xs:mt-8 lg:mt-0 leading-normal tracking-normal xs:text-center lg:text-left font-bold xs:text-31 lg:text-39 text-just-tailwind-black-900"
                                 >
                                     {{ name }}
                                 </h1>
@@ -44,10 +44,10 @@
 
                             <!-- PROFESSION SECTION -->
                             <div
-                                class="mt-0275"
+                                class="xs:mt-1 lg:mt-0275"
                             >
                                 <p
-                                    class="leading-normal tracking-normal text-left font-normal text-16 text-just-tailwind-gray-700"
+                                    class="leading-normal tracking-normal xs:text-center lg:text-left font-normal text-16 text-just-tailwind-gray-700"
                                 >
                                     {{ profession }}
                                 </p>
@@ -56,7 +56,7 @@
 
                             <!-- AMOUNT SECTION -->
                             <div
-                                class="mt-0525"
+                                class="xs:hidden lg:block mt-0525"
                             >
                                 <p
                                     class="leading-normal tracking-normal text-left font-normal text-16 text-just-tailwind-gray-700"
@@ -68,17 +68,16 @@
 
                             <!-- TAG SECTION -->
                             <div
-                                class="mt-11875 flex flex-wrap"
+                                class="xs:mt-8 lg:mt-11875 flex flex-wrap justify-center"
                             >
                                 <div
                                     v-for="(tag,i) in tags"
                                     :key="i"
-                                    class="px-2 py-2 rounded"
-                                    style="background-color: rgba(179, 189, 201, 0.23);"
-                                    :class="i == 0 ? 'ml-0' : 'ml-4'"
+                                    class="px-2 py-2 rounded xs:bg-just-tailwind-blue-100 lg:bg-just-tailwind-tag"
+                                    :class="i == 0 ? 'ml-0' : 'xs:ml-045 lg:ml-4'"
                                 >
                                     <p
-                                        class="leading-normal tracking-normal text-center text-16 font-bold text-just-tailwind-black"
+                                        class="leading-normal tracking-normal text-center xs:text-13 lg:text-16 font-bold xs:text-just-tailwind-primary lg:text-just-tailwind-black"
                                     >
                                         {{ tag.name }}
                                     </p>
@@ -89,9 +88,47 @@
                         <!-- END -->
                     </div>
                     <!-- END -->
+                    <!-- QUOTE SECTION -->
+                    <div
+                        class="xs:block xs:mx-0925 md:mx-20 lg:mx-0 lg:hidden mt-12"
+                    >
+                        <!-- FIRST SECTION -->
+                        <div
+                            class="text-left"
+                        >
+                            <img
+                                src="@/assets/images/opening-quote.svg"
+                                alt="quote"
+                            />
+                        </div>
+                        <!-- END -->
+
+                        <!-- SECOND SECTION -->
+                        <div
+                            class="xs:my-0075 lg:my-035 xs:ml-045 md:ml-10 lg:ml-11875"
+                        >
+                            <p
+                                class="text-center leading-normal tracking-normal text-just-tailwind-black xs:text-20 lg:text-31 font-normal"
+                                v-html="quote"
+                            />
+                        </div>
+                        <!-- END -->
+
+                        <!-- THIRD SECTION -->
+                        <div
+                            class="flex w-full justify-end"
+                        >
+                            <img
+                                src="@/assets/images/closing-quote.svg"
+                                alt="quote"
+                            />
+                        </div>
+                        <!-- END -->
+                    </div>
+                    <!-- END -->
                     <!-- SECOND SECTION -->
                     <div
-                        class="mt-12 pb-22625 border-b-2 border-solid border-just-tailwind-gray-300"
+                        class="xs:mx-4 md:mx-20 lg:mx-0 mt-12 xs:pb-12 lg:pb-22625 border-b-2 border-solid border-just-tailwind-gray-300"
                     >
                         <!-- CONTENT SECTION -->
                         <div
@@ -106,11 +143,11 @@
                                 <!-- ICON SECTION -->
                                 <div
                                     style="background-color: rgba(0, 123, 254, 0.2);"
-                                    class="w-12 h-12 rounded-full"
+                                    class="xs:w-8 xs:h-8 lg:w-12 lg:h-12 rounded-full"
                                 >
                                     <img
                                         :src="getImages(info.img)"
-                                        class="py-2"
+                                        class="xs:w-8 xs:h-8 lg:w-auto lg:h-auto py-2"
                                         alt="mask"
                                     />
                                 </div>
@@ -121,7 +158,7 @@
                                     class="text-left ml-4"
                                 >
                                     <p
-                                        class="text-left leading-normal tracking-normal text-20 text-just-tailwind-gray-700 font-semibold"
+                                        class="text-left leading-normal tracking-normal xs:text-16 lg:text-20 text-just-tailwind-gray-700 font-semibold"
                                     >
                                        {{ info.desc }}
                                     </p>
@@ -133,7 +170,7 @@
                         <!-- END -->
                         <!-- QUOTE SECTION -->
                         <div
-                            class="mt-12"
+                            class="xs:hidden lg:block mt-12"
                         >
                             <!-- FIRST SECTION -->
                             <div
@@ -173,11 +210,11 @@
                     <!-- END -->
                     <!-- THIRD SECTION -->
                     <div
-                        class="pb-22625 border-b-2 border-solid border-just-tailwind-gray-300"
+                        class="xs:mx-4 md:mx-20 lg:mx-0 xs:pb-8 lg:pb-22625 border-b-2 border-solid border-just-tailwind-gray-300"
                     >
                         <!-- HEADER SECTION -->
                         <div
-                            class="my-20"
+                            class="xs:hidden lg:block my-20"
                         >
                             <h3
                                 class="text-39 text-left leading-normal tracking-normal font-bold text-just-tailwind-black-900"
@@ -192,9 +229,11 @@
                             :key="i"
                         >
                             <!-- HEADER SECTION -->
-                            <div>
+                            <div
+                                class="xs:mt-8 lg:mt-0"
+                            >
                                 <h1
-                                    class="text-25 text-left leading-normal tracking-normal text-just-tailwind-black-900 font-bold"
+                                    class="text-25 text-left xs:text-16 lg:text-25 leading-normal tracking-normal text-just-tailwind-black-900 font-bold"
                                 >
                                     {{ data.title }}
                                 </h1>
@@ -203,10 +242,10 @@
 
                             <!-- DESCRIPTION -->
                             <div
-                                class="mt-8 mb-16"
+                                class="xs:mt-4 lg:mt-8 lg:mb-16"
                             >
                                 <p
-                                    class="text-20 font-normal text-left leading-normal tracking-normal text-just-tailwind-black"
+                                    class="xs:text-16 lg:text-20 font-normal text-left leading-normal tracking-normal xs:text-just-tailwind-gray-700 lg:text-just-tailwind-black"
                                 >
                                     {{ data.desc }}
                                 </p>
@@ -217,13 +256,15 @@
                     </div>
                     <!-- END -->
                     <!-- FOURTH SECTION -->
-                    <div>
+                    <div
+                        class="xs:mx-4 md:mx-20 lg:mx-0 xs:pb-8 lg:pb-0 xs:border-b-2 lg:border-b-0 xs:border-solid xs:border-just-tailwind-gray-300"
+                    >
                         <!-- HEADER SECTION -->
                         <div
-                            class="my-20"
+                            class="xs:my-12 lg:my-20"
                         >
                             <h3
-                                class="text-39 text-left leading-normal tracking-normal font-bold text-just-tailwind-black-900"
+                                class="xs:text-25 lg:text-39 text-left leading-normal tracking-normal font-bold text-just-tailwind-black-900"
                             >
                                 Reviews
                             </h3>
@@ -239,7 +280,7 @@
                                 class="flex items-center"
                             >
                                 <div
-                                    class="w-12 h-12"
+                                    class="xs:w-8 xs:h-8 lg:w-12 lg:h-12"
                                 >
                                     <img
                                         :src="getImages(data.img)"
@@ -248,7 +289,7 @@
                                     />
                                 </div>
                                 <h1
-                                    class="ml-8 text-25 text-left leading-normal tracking-normal text-just-tailwind-black-900 font-bold"
+                                    class="xs:ml-4 lg:ml-8 xs:text-16 lg:text-25 text-left leading-normal tracking-normal text-just-tailwind-black-900 font-bold"
                                 >
                                     {{ data.name }}
                                 </h1>
@@ -257,10 +298,10 @@
 
                             <!-- DESCRIPTION -->
                             <div
-                                class="mt-8 mb-16"
+                                class="xs:mt-4 lg:mt-8 xs:mb-8 lg:mb-16"
                             >
                                 <p
-                                    class="text-20 font-normal text-left leading-normal tracking-normal text-just-tailwind-black"
+                                    class="xs:text-16 lg:text-20 font-normal text-left leading-normal tracking-normal text-just-tailwind-black"
                                 >
                                     {{ data.desc }}
                                 </p>
@@ -276,7 +317,7 @@
 
                 <!-- SLOT SECTION -->
                 <div
-                    class="w-843125 border border-solid border-just-tailwind-gray bg-just-tailwind-white rounded-12 py-6 px-104375 shadow-slot"
+                    class="xs:hidden lg:block w-843125 border border-solid border-just-tailwind-gray bg-just-tailwind-white rounded-12 py-6 px-104375 shadow-slot"
                 >
                     <!-- AMOUNT SECTION -->
                     <div>
@@ -374,12 +415,12 @@
             <!-- END -->
             <!-- MORE THERAPIST SECTION -->
             <div
-                class="relative z-50 mt-32"
+                class="xs:mt-4 xs:mx-4 md:mx-20 xs:mb-32 lg:mb-0 lg:mx-0 lg:mt-32"
             >
                 <!-- HEADER SECTION -->
                 <div>
                     <h3
-                        class="text-31 text-left leading-normal tracking-normal font-bold text-just-tailwind-black-900"
+                        class="xs:text-25 lg:text-31 text-left leading-normal tracking-normal font-bold text-just-tailwind-black-900"
                     >
                         More Therapists
                     </h3>
@@ -388,17 +429,17 @@
 
                 <!-- THERAPIST CARD CONTAINER -->
                 <div
-                    class="my-16 flex items-baseline overflow-x-scroll"
+                    class="xs:my-12 lg:my-16 flex items-baseline overflow-x-scroll"
                 >
                     <!-- CARD SECTION -->
                     <div
                         v-for="(data, i) in moreTherapists"
                         :key="i"
-                        :class="i == 0 ? 'ml-0' : 'ml-4'"
+                        :class="i == 0 ? 'ml-0' : 'xs:ml-225 lg:ml-4'"
                     >
                         <!-- IMAGE SECTION -->
                         <div
-                            class="w-375 h-auto rounded-08"
+                            class="xs:w-63875 lg:w-375 h-auto rounded-08"
                         >
                             <img
                                 :src="getImages(data.img)"
@@ -410,12 +451,12 @@
 
                         <!-- CONTENT SECTION -->
                         <div
-                            class="mt-8"
+                            class="xs:mt-4 lg:mt-8"
                         >
                             <!-- NAME SECTION -->
                             <div>
                                 <h1
-                                    class="leading-normal tracking-normal text-left font-bold text-25 text-just-tailwind-black-900"
+                                    class="leading-normal tracking-normal text-left font-bold xs:text-20 lg:text-25 text-just-tailwind-black-900"
                                 >
                                     {{ data.name }}
                                 </h1>
@@ -424,10 +465,10 @@
 
                             <!-- PROFESSION SECTION -->
                             <div
-                                class="mt-2"
+                                class="xs:mt-1 lg:mt-2"
                             >
                                 <p
-                                    class="leading-normal tracking-normal text-left font-normal text-16 text-just-tailwind-gray-700"
+                                    class="leading-normal tracking-normal text-left font-normal xs:text-13 lg:text-16 text-just-tailwind-gray-700"
                                 >
                                     {{ data.profession }}
                                 </p>
@@ -436,15 +477,15 @@
 
                             <!-- TAG SECTION -->
                             <div
-                                class="mt-4 flex flex-wrap"
+                                class="xs:mt-2 lg:mt-4 flex flex-wrap"
                             >
                                 <div
                                     v-for="i in data.tags"
                                     :key="i"
-                                    :class="i == 'Stress' ? 'ml-0' : 'ml-4'"
+                                    :class="i == 'Stress' ? 'ml-0' : 'xs:ml-2 lg:ml-4'"
                                 >
                                     <p
-                                        class="leading-normal tracking-normal text-center text-16 font-medium text-just-tailwind-gray-700"
+                                        class="leading-normal tracking-normal text-center xs:text-13 lg:text-16 font-medium text-just-tailwind-gray-700"
                                     >
                                         {{ i }}
                                     </p>
@@ -461,6 +502,35 @@
 
             </div>
             <!-- END -->
+            <!-- MOBILE AMOUNT SECTION -->
+            <div
+                class="xs:block lg:hidden fixed bottom-0 bg-just-tailwind-white w-full py-5 px-4 md:px-20 shadow-slot-mobile"
+            >
+                <!-- CONTENT SECTION -->
+                <div
+                    class="flex items-center justify-between"
+                >
+                    <!-- AMOUNT SECTION -->
+                    <div>
+                        <p
+                            class="leading-normal tracking-normal text-left text-16"
+                        >
+                            <span class="font-bold text-just-tailwind-black">${{ amount }} / Session</span>
+                        </p>
+                    </div>
+                    <!-- END -->
+
+                    <!-- BUTTON SECTION -->
+                    <button
+                        class="tracking-normal bg-just-tailwind-primary leading-normal text-just-tailwind-white font-bold text-16 text-center py-3 px-11 rounded"
+                    >
+                        See Dates
+                    </button>
+                    <!-- END -->
+                </div>
+                <!-- END -->
+            </div>
+            <!-- END -->
         </div>
         <!-- END -->
     </center>
@@ -474,7 +544,7 @@ export default {
             profession: 'Clinical Psychologist',
             amount: 80,
             time: 60,
-            quote: "I support women, moms, trauma <br> survivors, and those experiencing <br> invisible illnesses to change patterns and live their best lives",
+            quote: `I support women, moms, trauma <br class="xs:hidden lg:block"> survivors, and those experiencing <br class="xs:hidden lg:block"> invisible illnesses to change patterns and live their best lives`,
             moreTherapists: [
                 {
                     img: 'alisha3x.png',
