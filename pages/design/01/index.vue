@@ -16,8 +16,8 @@
 <script>
 export default {
     components: {
-        TopNavbar: () => import("@/components/therapy/TopNavbar/index.vue"),
-        Profile: () => import("@/components/therapy/Profile/index.vue")
+        TopNavbar: () => import("@/components/01/TopNavbar/index.vue"),
+        Profile: () => import("@/components/01/Profile/index.vue")
     },
     data () {
         return {}
