@@ -165,6 +165,7 @@ module.exports = {
         'base': '2.2rem',
         '0': '0',
         '0025':'0.0625rem',
+        '009375': '0.09375rem',
         '05':'0.125rem',
         '0075': '0.1875rem',
         '1': '0.25rem',
@@ -410,6 +411,7 @@ module.exports = {
         '34': '9rem',
         '3425': '9.125rem',
         '36': '10rem',
+        '3675': '10.75rem',
         '38': '11rem',
         '48': '12rem',
         '5150': '12.875rem',
@@ -530,6 +532,7 @@ module.exports = {
         '3350': '8.75rem',
         '34': '9rem',
         '36': '10rem',
+        '3675': '10.75rem',
         '38': '11rem',
         '42': '11.5rem',
         '48': '12rem',
@@ -546,6 +549,7 @@ module.exports = {
         '60125': '15.125rem',
         '61': '15.25rem',
         '63': '15.75rem',
+        '63875': '15.875rem',
         '64': '16rem',
         '675':'16.875rem',
         '68': '17rem',
@@ -776,6 +780,7 @@ module.exports = {
           'just-tailwind-black': '#0b192b',
           'just-tailwind-black-900': "#1b3a5e",
           'just-tailwind-blue': '#559bfb',
+          'just-tailwind-blue-100': '#e1eefc',
           'just-tailwind-indigo': '#2c3782',
           'just-tailwind-purple': '#816bff',
           'just-tailwind-pink': '#ff63a5',
@@ -805,7 +810,8 @@ module.exports = {
           'just-tailwind-gray': '#8091a7',
           'just-tailwind-light': '#e5e9f2',
           'just-tailwind-lighter': '#f5f6fa',
-          'f8fafb': '#f8fafb'
+          'f8fafb': '#f8fafb',
+          'just-tailwind-tag': 'rgba(179, 189, 201, 0.23)'
         },
         fontFamily: {
           sans: ["Mulish"]
@@ -814,6 +820,7 @@ module.exports = {
           'cargogen-bold': '600'
         },
         boxShadow: {
+          'slot-mobile': '0 -3px 6px 0 rgba(0, 0, 0, 0.16)',
           'slot': '0 3px 16px 0 rgba(0, 0, 0, 0.08)',
           'top-navbar': '0 7px 10px 0 rgba(65, 65, 65, 0.07)',
           'white': '2px 4px 14px 0 rgba(0, 0, 0, 0.1)',

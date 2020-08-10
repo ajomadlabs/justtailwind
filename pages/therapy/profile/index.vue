@@ -6,7 +6,7 @@
         <!-- END -->
         <!-- PROFILE COMPONENT -->
         <Profile
-            class="mt-38"
+            class="xs:mt-24 lg:mt-38"
         />
         <!-- END -->
         <!-- END -->
